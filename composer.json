@@ -22,9 +22,15 @@
     "issues": "https://github.com/pear2/Net_RouterOS/issues",
     "wiki": "https://github.com/pear2/Net_RouterOS/wiki"
   },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git@github.com:Dim434/Net_Transmitter.git"
+    }
+  ],
   "require": {
     "php": ">=5.3",
-    "pear2/net_transmitter": "dev-master@dev"
+    "dim434/net_transmitter": "dev-master@dev"
   },
   "require-dev": {
     "ext-iconv": "*",
@@ -35,12 +41,7 @@
     "pear2/console_commandline": "dev-master",
     "pear2/console_color": "dev-develop"
   },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "git@github.com:Dim434/Net_Transmitter.git"
-    }
-  ],
+
   "suggest": {
     "pear2/cache_shm": "Enables persistent connections.",
     "pear2/console_commandline": "Enables the console",
