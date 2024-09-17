@@ -30,13 +30,13 @@
   ],
   "require": {
     "php": ">=5.3",
-    "dim434/net_transmitter": "dev-master@dev"
+    "dim434/net_transmitter": "dev-master"
   },
   "require-dev": {
     "ext-iconv": "*",
     "phpunit/phpunit": "^5.0.0",
     "squizlabs/php_codesniffer": "@stable",
-    "dim434/net_transmitter": "dev-master@dev",
+    "dim434/net_transmitter": "dev-master",
     "pear2/cache_shm": "dev-develop",
     "pear2/console_commandline": "dev-master",
     "pear2/console_color": "dev-develop"
