@@ -504,7 +504,7 @@ class Client
         while ((!$hasNoTag && $this->isRequestActive($tag))
         || ($hasNoTag && 0 !== $this->getPendingRequestsCount())
         ) {
-            $newReply = $this->dispatchNextResponse(null);
+            $newReply = $this->dispatchNextResponse(null, null);
             if ($newReply->getTag() === $tag) {
                 if ($hasNoTag) {
                     $result[] = $newReply;
