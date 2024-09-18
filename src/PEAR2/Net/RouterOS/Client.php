@@ -593,7 +593,7 @@ class Client
         try {
             if (null === $sTimeout) {
                 while ($this->getPendingRequestsCount() !== 0) {
-                    $this->dispatchNextResponse(null);
+                    $this->dispatchNextResponse(null, null);
                 }
             } else {
                 list($usStart, $sStart) = explode(' ', microtime());
