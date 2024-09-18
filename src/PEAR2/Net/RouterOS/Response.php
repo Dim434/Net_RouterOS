@@ -84,7 +84,7 @@ class Response extends Message
      *     the new response.
      * @param int|null      $streamOn  Threshold after which to stream
      *     a word. NULL to disable streaming altogether.
-     * @param int           $sTimeout  If a response is not immediately
+     * @param int|null      $sTimeout  If a response is not immediately
      *     available, wait this many seconds. If NULL, wait indefinitely.
      * @param int|null      $usTimeout Microseconds to add to the waiting time.
      * @param Registry|null $reg       An optional registry to sync the
@@ -171,7 +171,7 @@ class Response extends Message
      *     the new response.
      * @param int|null     $streamOn  Threshold after which to stream
      *     a word. NULL to disable streaming altogether.
-     * @param int          $sTimeout  If a response is not immediately
+     * @param int|null          $sTimeout  If a response is not immediately
      *     available, wait this many seconds. If NULL, wait indefinitely.
      *     Note that if an empty sentence is received, the timeout will be
      *     reset for another sentence receiving.
@@ -186,6 +186,7 @@ class Response extends Message
         $usTimeout = null
     ) {
         do {
+            error_log("_receive called with sTimeout $sTimeout and usTimoeut $usTimeout");
             if (!$com->getTransmitter()->isDataAwaiting(
                 $sTimeout,
                 $usTimeout
